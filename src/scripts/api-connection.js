@@ -2,12 +2,11 @@
 const baseURL = "https://api.weatherapi.com/v1"
 const key = "620292f288044cbdb84235050262609"
 
-async function fetchWeather({cidade}){
-    const search = `${baseURL}/forecast.json?`
-    const response = await fetch(`${search}key=${key}&q=${cidade}&days=6&lang=pt`)
+// Conectando API e resgatando os dados de clima da cidade
+export async function fetchWeather({location}){
+    const request = `${baseURL}/forecast.json?`
+    const response = await fetch(`${request}key=${key}&q=${encodeURIComponent(location)}&days=6&lang=pt`)
     const data = await response.json()
-
-    console.log(data.forecast)
+    
+    return data
 }
-
-fetchWeather({cidade: "Sao Paulo"})
