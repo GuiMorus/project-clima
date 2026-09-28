@@ -22,6 +22,7 @@
 
     @media screen and (min-width: 768px){
         --text-lg2: 600 2rem/120% var(--font-family); /* 48px */
+        --text-lg3: 500 1.6rem/120% var(--font-family);
     }
 }
 
