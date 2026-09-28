@@ -42,7 +42,7 @@ export async function fetchWeather(local){
         const weatherDatas = {
             // Clima do dia atual
             city: location.name,
-            contry: location.country,
+            country: location.country,
             date: formattedDate.format("DD [de] MMMM [de] YYYY"),
             week: formattedDate.format("dddd"),
             icon: current.condition.icon.replace("64x64", "128x128"),

@@ -1,0 +1,17 @@
+// Conectando DOM
+export const city = document.querySelector('#city-name')
+export const country = document.querySelector('#country-name')
+export const date = document.querySelector('#date')
+export const week = document.querySelector('#week')
+export const iconWeather = document.querySelector('#icon-weather')
+export const weather = document.querySelector('#weather')
+export const status = document.querySelector('#status')
+export const sensation = document.querySelector('#sensation strong')
+export const humidity = document.querySelector('#humidity strong')
+export const wind = document.querySelector('#wind strong')
+
+export const nextFirst = document.querySelector('#first')
+export const nextSecond = document.querySelector('#second')
+export const nextThird = document.querySelector('#third')
+export const nextFourth = document.querySelector('#fourth')
+export const nextFifth = document.querySelector('#fifth')
