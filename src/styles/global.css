@@ -27,7 +27,7 @@
 
 body{
     display: grid;
-    grid-template-columns: 1fr 24px minmax(0, 1280px) 24px 1fr;
+    grid-template-columns: 1fr 24px minmax(0, 1100px) 24px 1fr;
     font: var(--text);
     background-color: var(--color-bg);
 
