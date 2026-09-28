@@ -8,15 +8,17 @@
     --color-primary: #375073;
     --color-secondary: #6c7282;
     --color-highlight: #377DDC;
-    --color-bg: #f0f3f8;
+    --color-border: #e4e7ec;
+    --color-bg: #f2f5fa;
     --color-base: #171717;
+    --color-degrade: #357fc6, #93bfec;
 
     --font-family: "Roboto", sans-serif;
     --text-lg1: 600 2rem/120% var(--font-family);
     --text-lg2: 600 1.5rem/120% var(--font-family);
     --text-lg3: 500 1.25rem/120% var(--font-family);
     --text: 400 1rem/120% var(--font-family);
-    --text-sm: 500 0.875rem/100% var(--font-family);
+    --text-sm: 400 0.875rem/100% var(--font-family);
 
     @media screen and (min-width: 768px){
         --text-lg2: 600 2rem/120% var(--font-family); /* 48px */
@@ -36,8 +38,7 @@ body{
 
 
     main, footer{
-        grid-column: 3/4;
-        margin: auto;
+        grid-column: 3 / 4;
     }
 
     h1{
