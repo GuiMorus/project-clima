@@ -87,15 +87,23 @@ main{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 5rem;
+            height: 4rem;
             background-color: inherit;
 
             div{
                 text-align: left;
+
+                h2{
+                    max-width: 11.4rem;
+                }
             }
 
             aside{
                 text-align: right;
+                
+                p{
+                    font-size: 0.9rem;
+                }
             }
         }
 
@@ -105,10 +113,14 @@ main{
                 align-items: center;
                 justify-content: center;
                 gap: 20px;
-                margin-block: 3rem;
+                margin-block: 4rem;
 
                 strong{
                     font-size: 3rem;
+                }
+
+                p{
+                    margin-top: 1rem;
                 }
             }
 
@@ -116,7 +128,7 @@ main{
                 display: flex;
                 flex-flow: row nowrap;
                 justify-content: space-between;
-                margin-top: 3rem;
+                margin-top: 5rem;
 
                 li{
                     display: flex;
@@ -139,9 +151,19 @@ main{
             justify-content: space-between;
             gap: 30px;
             margin-top: 1rem;
+            padding-bottom: 1rem;
             text-align: center;
             overflow-x: scroll;
+            scrollbar-width: thin;
+            scrollbar-color: var(--color-highlight) transparent;
 
+            &::-webkit-scrollbar-thumb{
+                border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-button{
+                display: none;
+            }
 
             .cards{
                 display: flex;
