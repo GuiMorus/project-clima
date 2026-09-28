@@ -4,8 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima - API de Tempo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.ico"><script defer src="main.js"></script></head>
 <body>
-    <h1>Clima Agora</h1>
+    <header>
+        <div>
+            <div>
+                <img src="./src/assets/img/sun.svg" alt="Icone da Marca">
+                <h1>Clima Agora</h1>
+            </div>
+            <p>Veja o clima da sua cidade</p>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <div>
+                <img src="./src/assets/img/pin.svg" alt="icone" class="icon">
+                <input type="text" name="" id="" placeholder="Digite o nome da cidade" required>
+                <button type="submit"><img src="./src/assets/img/search.svg" alt="icone" class="icon">Buscar</button>
+            </div>
+        </form>
+
+        <div id="main-card">
+            <header>
+                <div>
+                    <h2 id="city-name">Cidade</h2>
+                    <p id="country-name">País</p>
+                </div>
+
+                <aside>
+                    <p id="date" id="date">data</p>
+                    <p id="week" id="week">Dia da semana</p>
+                </aside>
+            </header>
+
+            <div id="main-info">
+                <div>
+                    <img src="//cdn.weatherapi.com/weather/128x128/day/113.png" alt="Icone do clima" id="icon-weather">
+                    <div id="information">
+                        <strong id="weather">0ºC</strong>
+                        <p id="status">Dia Limpo</p>
+                    </div>
+                </div>
+
+                <ul id="details">
+                    <li id="sensation">
+                        <img src="./src/assets/img/thermometer.svg" alt="Icone sensação termica" class="icon">
+                        <div>
+                            <p>Sensação</p>
+                            <strong>0ºC</strong>
+                        </div>
+                    </li>
+
+                    <li id="humidity">
+                        <img src="./src/assets/img/drop.svg" alt="Icone umidade"  class="icon">
+                        <div>
+                            <p>Umidade</p>
+                            <strong>0%</strong>
+                        </div>
+                    </li>
+
+                    <li id="wind">
+                        <img src="./src/assets/img/wind.svg" alt="Icone vento" class="icon">
+                        <div>
+                            <p>Vento</p>
+                            <strong>0 km/h</strong>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <h3>Previsão para os próximos dias</h3>
+            <div>
+                <div class="cards" id="first">
+                    <p>Dia da Semana</p>
+                    <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Ícone">
+                    <strong>0° / <span>0°</span></strong>
+                    <small>detalhe</small>
+                </div>
+
+                <div class="cards" id="second">
+                    <p>Dia da Semana</p>
+                    <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Ícone">
+                    <strong>0° / <span>0°</span></strong>
+                    <small>detalhe</small>
+                </div>
+
+                <div class="cards" id="third">
+                    <p>Dia da Semana</p>
+                    <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Ícone">
+                    <strong>0° / <span>0°</span></strong>
+                    <small>detalhe</small>
+                </div>
+
+                <div class="cards" id="fourth">
+                    <p>Dia da Semana</p>
+                    <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Ícone">
+                    <strong>0° / <span>0°</span></strong>
+                    <small>detalhe</small>
+                </div>
+
+                <div class="cards" id="fifth">
+                    <p>Dia da Semana</p>
+                    <img src="//cdn.weatherapi.com/weather/64x64/day/113.png" alt="Ícone">
+                    <strong>0° / <span>0°</span></strong>
+                    <small>detalhe</small>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Dados fornecidos por Weather API</p>
+    </footer>
 </body>
 </html>
