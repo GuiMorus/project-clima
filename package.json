@@ -1,6 +1,6 @@
 {
     "name": "Projeto - Clima API",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Aplicação Web para pesquisar o clima de uma cidade",
     "author": "Guilherme Moreira (GuiMorus)",
     "scripts": {
