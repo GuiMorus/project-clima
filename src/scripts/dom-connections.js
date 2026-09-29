@@ -1,4 +1,5 @@
 // Conectando DOM
+export const mainCard = document.querySelector('#main-card')
 export const city = document.querySelector('#city-name')
 export const country = document.querySelector('#country-name')
 export const date = document.querySelector('#date')

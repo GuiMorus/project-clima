@@ -49,6 +49,7 @@ export async function fetchWeather(local){
             icon: current.condition.icon.replace("64x64", "128x128"),
             temp: current.temp_c,
             status: current.condition.text,
+            code: current.condition.code,
             sensation: current.feelslike_c,
             humidity: current.humidity,
             wind: current.wind_kph,

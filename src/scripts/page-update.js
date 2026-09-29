@@ -1,4 +1,5 @@
 import * as dom from "./dom-connections.js"
+import {gradientList} from "./code-gradient-list.js"
 
 // Iniciando variáveis
 const nextDays = [dom.nextFirst, dom.nextSecond, dom.nextThird, dom.nextFourth, dom.nextFifth]
@@ -8,6 +9,7 @@ let count = 0
 
 export async function pageUpdate(data) {
     // Modificando card principal
+    dom.mainCard.style.background = gradientList[data.code]
     dom.city.textContent = data.city
     dom.country.textContent = data.country
     dom.date.textContent = data.date
