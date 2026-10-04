@@ -24,10 +24,15 @@ export async function pageUpdate(data) {
 
     // Modificando cards de próximos dias
     for(let day of nextDays){
-        day.querySelector('p').textContent = data.next[count].week
-        day.querySelector('img').src = data.next[count].icon
-        day.querySelector('strong').innerHTML = `${convertSymbol(data.next[count].max)}º / <span>${convertSymbol(data.next[count].min)}°</span>`
-        day.querySelector('small').textContent = data.next[count].status
+        const nextDay = data.next[count]
+
+        day.querySelector('p').textContent = nextDay?.week ?? "não informado"
+        day.querySelector('img').src = nextDay?.icon ?? "./src/assets/img/alert.svg"
+        day.querySelector('strong').innerHTML = nextDay
+            ? `${convertSymbol(nextDay.max)}º / <span>${convertSymbol(nextDay.min)}°</span>`
+            : "0"
+        day.querySelector('small').textContent = nextDay?.status ?? "não informado"
+
         count++
     }
 

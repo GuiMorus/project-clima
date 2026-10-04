@@ -34,6 +34,7 @@ export async function fetchWeather(local){
         // Objeto com as informações da API
         const date = location.localtime.split(" ")[0]
         const formattedDate = dayjs(date).locale("pt-br")
+
         const nextFirst = forecast[1]
         const nextSecond = forecast[2]
         const nextThird = forecast[3]
@@ -57,53 +58,122 @@ export async function fetchWeather(local){
             // Clima dos dias seguintes
             next: [
                 {
-                    // Primeiro dia seguinte (amanhã)
-                    week: dayjs(nextFirst.date).locale("pt-br").format("dddd"),
-                    icon: nextFirst.day.condition.icon,
-                    max: nextFirst.day.maxtemp_c,
-                    min: nextFirst.day.mintemp_c,
-                    status: nextFirst.day.condition.text
+                    // Primeiro dia seguinte
+                    week: nextFirst
+                        ? dayjs(nextFirst.date).locale("pt-br").format("dddd")
+                        : "não informado",
+
+                    icon: nextFirst
+                        ? nextFirst.day.condition.icon
+                        : "./src/assets/img/alert.svg",
+
+                    max: nextFirst
+                        ? nextFirst.day.maxtemp_c
+                        : "0",
+
+                    min: nextFirst
+                        ? nextFirst.day.mintemp_c
+                        : "0",
+
+                    status: nextFirst
+                        ? nextFirst.day.condition.text
+                        : "não informado"
                 },
                 {
-                    // Segundo dia seguinte (depois de amanhã)
-                    week: dayjs(nextSecond.date).locale("pt-br").format("dddd"),
-                    icon: nextSecond.day.condition.icon,
-                    max: nextSecond.day.maxtemp_c,
-                    min: nextSecond.day.mintemp_c,
-                    status: nextSecond.day.condition.text
+                    // Segundo dia seguinte
+                    week: nextSecond
+                        ? dayjs(nextSecond.date).locale("pt-br").format("dddd")
+                        : "não informado",
+
+                    icon: nextSecond
+                        ? nextSecond.day.condition.icon
+                        : "./src/assets/img/alert.svg",
+
+                    max: nextSecond
+                        ? nextSecond.day.maxtemp_c
+                        : "não informado",
+
+                    min: nextSecond
+                        ? nextSecond.day.mintemp_c
+                        : "0",
+
+                    status: nextSecond
+                        ? nextSecond.day.condition.text
+                        : "0"
                 },
                 {
                     // Terceiro dia seguinte
-                    week: dayjs(nextThird.date).locale("pt-br").format("dddd"),
-                    icon: nextThird.day.condition.icon,
-                    max: nextThird.day.maxtemp_c,
-                    min: nextThird.day.mintemp_c,
-                    status: nextThird.day.condition.text
+                    week: nextThird
+                        ? dayjs(nextThird.date).locale("pt-br").format("dddd")
+                        : "não informado",
+
+                    icon: nextThird
+                        ? nextThird.day.condition.icon
+                        : "./src/assets/img/alert.svg",
+
+                    max: nextThird
+                        ? nextThird.day.maxtemp_c
+                        : "0",
+
+                    min: nextThird
+                        ? nextThird.day.mintemp_c
+                        : "0",
+
+                    status: nextThird
+                        ? nextThird.day.condition.text
+                        : "não informado"
                 },
                 {
                     // Quarto dia seguinte
-                    week: dayjs(nextFourth.date).locale("pt-br").format("dddd"),
-                    icon: nextFourth.day.condition.icon,
-                    max: nextFourth.day.maxtemp_c,
-                    min: nextFourth.day.mintemp_c,
-                    status: nextFourth.day.condition.text
+                    week: nextFourth
+                        ? dayjs(nextFourth.date).locale("pt-br").format("dddd")
+                        : "não informado",
+
+                    icon: nextFourth
+                        ? nextFourth.day.condition.icon
+                        : "./src/assets/img/alert.svg",
+
+                    max: nextFourth
+                        ? nextFourth.day.maxtemp_c
+                        : "0",
+
+                    min: nextFourth
+                        ? nextFourth.day.mintemp_c
+                        : "0",
+
+                    status: nextFourth
+                        ? nextFourth.day.condition.text
+                        : "não informado"
                 },
                 {
                     // Quinto dia seguinte
-                    week: dayjs(nextFifth.date).locale("pt-br").format("dddd"),
-                    icon: nextFifth.day.condition.icon,
-                    max: nextFifth.day.maxtemp_c,
-                    min: nextFifth.day.mintemp_c,
-                    status: nextFifth.day.condition.text
+                    week: nextFifth
+                        ? dayjs(nextFifth.date).locale("pt-br").format("dddd")
+                        : "não informado",
+
+                    icon: nextFifth
+                        ? nextFifth.day.condition.icon
+                        : "./src/assets/img/alert.svg",
+
+                    max: nextFifth
+                        ? nextFifth.day.maxtemp_c
+                        : "0",
+
+                    min: nextFifth
+                        ? nextFifth.day.mintemp_c
+                        : "0",
+
+                    status: nextFifth
+                        ? nextFifth.day.condition.text
+                        : "não informado"
                 }
             ]
         }
 
         return weatherDatas
-    
+
     }catch(error){
         alert("Não foi possível pegar todos os dados - Tente novamente mais tarde")
         console.log(error)
     }
-
 }
